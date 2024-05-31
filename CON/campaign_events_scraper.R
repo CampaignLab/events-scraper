@@ -139,7 +139,7 @@ for (i in seq_along(postcodes2$Postcode)) {
 
         write.csv(
             con_scrape_df, 
-            paste0("event-scrape_con/data/", date, "_", gsub(" ", "_", postcodes$Postcode[i]), "_con-events.csv"))
+            paste0("CON/data/", date, "_", gsub(" ", "_", postcodes$Postcode[i]), "_con-events.csv"))
 
     } else {
         con_scrape_df <- con_event_scrape(
@@ -150,7 +150,7 @@ for (i in seq_along(postcodes2$Postcode)) {
 
         write.csv(
             con_scrape_df, 
-            paste0("event-scrape_con/data/",
+            paste0("CON/data/",
             date, "_", gsub(" ", "-", postcodes2$Postcode[i]), "_con-events.csv"))
     }
     print(paste0("Postcode ", i , " of ", length(postcodes2$Postcode), " done."))
